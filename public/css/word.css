@@ -1,0 +1,32 @@
+.result {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #1d2a57;
+}
+
+.line-1 {
+  height: 15px;
+  border-bottom: 2px solid #dedede;
+}
+
+.word_value {
+  font-size: 36px;
+  border-bottom: 2px solid #fdc702;
+  padding-bottom: 5px;
+}
+
+.show {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.type {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.ol-setting {
+  padding-left: 25px;
+  padding-right: 10px;
+  border-bottom: 2px solid #fdc702;
+}
