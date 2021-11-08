@@ -1,5 +1,5 @@
-const wn_gloss = require('./wn_gloss')
-const wn_synset = require('./wn_synset')
+const wn_gloss = require('./WordNet/wn_gloss')
+const wn_synset = require('./WordNet/wn_synset')
 
 const set_word = new Set()
 const word_list = []
@@ -48,4 +48,4 @@ const handle = (word) => {
 // const love = handle('love')
 // console.log(love.id_gloss)
 
-module.exports = handle
+module.exports = wordnet
