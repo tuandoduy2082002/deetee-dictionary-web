@@ -13,7 +13,7 @@ for (word of set_word) {
 }
 
 
-const handle = (word) => {
+const wordnet = (word) => {
     if (!word_list.includes(word)) {
         return null;
     }

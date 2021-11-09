@@ -1,0 +1,42 @@
+<section class="result">
+    <p style="padding-top: 10px; font-size: 15px">
+        <i>Ý nghĩa của <b><%= word %></b></i> trong tiếng Anh
+    </p>
+    <div class="line-1"></div>
+    <div class="show">
+        <div class="word_value"><b> <%= word %> </b></div>
+        <% for (let type of type_list) { %>
+        <div class="type">
+            <p>
+                <% let _type = ''; if (type === 'n') { _type = 'noun' } else if
+          (type === 'v') { _type = 'verb' } else if ( type === 's' || type ===
+          'a') { _type = 'adjective' } else if (type === 'r') { _type =
+          'adverb' } %>
+                <i><%= _type %></i>
+            </p>
+        </div>
+
+        <div class="ol-setting">
+            <ol>
+                <% for (let id of list_id) { %> <% if (id_type.get(id) === type) {
+          %> <% let arr = id_gloss.get(id).split(';') %>
+                <li style="font-size: 18px">
+                    <b style="line-height: 25px; font-size: 18px"><%= arr[0] %> <br /></b>
+                    <p></p>
+                </li>
+                <% if (arr.length > 1) { %>
+                <ul>
+                    <% for (let a of arr) { %> <% if (arr.indexOf(a) == 0) { %> <%
+            continue %> <% } else { %>
+                    <li style="list-style-type: disc; font-size: 18px">
+                        <i><%= a %></i> <br />
+                    </li>
+                    <% } %> <% } %>
+                </ul>
+                <% } %> <% } %> <% } %>
+            </ol>
+        </div>
+
+        <% } %>
+    </div>
+</section>
